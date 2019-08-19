@@ -77,10 +77,10 @@ Reconnect:
 				go func() {
 					for _, trade := range v.Executions {
 						if err := db.Insert(&trade); err != nil {
-							log.Error(err)
+							// log.Error(err)
 						}
 
-						log.Debugf("%s: %+v\n", channel, trade)
+						// log.Debugf("%s: %+v\n", channel, trade)
 					}
 				}()
 
