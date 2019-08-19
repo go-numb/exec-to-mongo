@@ -77,6 +77,7 @@ Reconnect:
 				go func() {
 					for _, trade := range v.Executions {
 						if err := db.Insert(&trade); err != nil {
+							// Can't map file memory. /dev/loopX use full.
 							// log.Error(err)
 						}
 
